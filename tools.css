@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(image/mouse.cur),auto;
+}
+.tool{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(54, 119, 152, 0.405),rgba(99, 132, 139, 0.527)), url("image/bg-img.png");
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.vpn {
+    padding-top: 40px;
+    text-align: center;
+    
+}
+.vpn h1{
+    color: rgb(245, 8, 8);
+
+}
+.vpn p{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+}
+
+  .center {
+    position:absolute;
+    color: white;
+    left:50%;
+    transform:translate(-50%,0%);
+  }
+  .download-btn {
+    width:200px;
+    height:60px;
+    text-align:center;
+    cursor:pointer;
+    margin:20px 0px;
+    border-radius:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+  }
+  .download-btn.btn-1 {
+    border:5px solid #00acee;
+  }
+
+  .download-btn div {
+    width:100%;
+    height:100%;
+    font-size:15px;
+    font-weight:600;
+    text-transform:uppercase;
+    line-height:50px;
+  }
+  .download-btn.btn-1 .top {
+    background:#00acee;
+  }
+
+  
+  .download-btn .bottom {
+    background:#eee;
+    color:#222;
+  }
+  .download-btn .top {
+    transition:all 300ms ease-in-out;
+  }
+  .download-btn:hover .top {
+    margin-top:-50px;
+  }
+   .download-btn :hover{
+    background-image: linear-gradient(rgba(54, 119, 152, 0.405),rgba(99, 132, 139, 0.527)), url("image/Turbovpn.jpg");
+  }
