@@ -74,3 +74,44 @@
    .download-btn :hover{
     background-image: linear-gradient(rgba(54, 119, 152, 0.405),rgba(99, 132, 139, 0.527)), url("image/Turbovpn.jpg");
   }
+  .telegram_proxy {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 10px;
+    
+}
+.telegram_proxy h1{
+    color: rgb(0, 0, 0);
+
+}
+.telegram_proxy p{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+.sever{
+  align-items: center;
+  transform:translate(45%,0%);
+}
+.sever ul li{
+  list-style: none;
+  padding-bottom: 10px;
+  align-items: center;
+  font-size: 25px;
+  font-style: italic;
+}
+.sever ul li a i{
+  display: inline-block;
+}
+.sever ul li a{
+  color: rgb(222, 25, 25);
+  display: flex;
+  text-decoration: none;
+}
+.sever ul li a:hover{
+  cursor: pointer;
+  font-style: normal;
+  font-size: 30px;
+  color: rgb(28, 255, 28);
+  
+}
