@@ -13,23 +13,40 @@
       <div class="whats">
         <h1>WhatsMe</h1> 
         <div class="text">
-       <label for="num">Enter The Phone Number :</label> </span><input type="number" inputmode="numeric" id="num" placeholder="1234567890">
+       <label for="num">Enter The Phone Number :</label> </span><input type="number" inputmode="numeric" id="num" placeholder="1234567890" class="text-box">
         <button onclick="whatsme()" class="button-85"><i class="fab fa-whatsapp"></i> Open</button>
       </div>
         <script>
+          function count(ip)
+          {
+           var x = ip;
+           var c = 0;
+           while(x!=0)
+           {
+             c++;
+             x = parseInt(x/10);
+           }
+           return c; 
+          }
           function whatsme()
           {
             var ph = document.getElementById("num").value;
+            var cc = count(ph);
             if(ph=="")
             {
               alert("Enter the input.....");
             }
-            else if(ph!=10)
+            else if(cc<10)
             {
-              alert("Some number are missing");
+              alert("Some number are missing...." );
+            }
+            else if(cc>10)
+            {
+              alert("Check the number.....")
             }
             else
             window.open("http://api.whatsapp.com/send?phone=+91"+ph+"&text=Thanks Ragu");
+            document.getElementById("num").value=''
           }
         </script>
       </div>
