@@ -105,9 +105,14 @@
 
 
 <script>
+    function loaderi()
+    {
+        loader.style.display="none";
+    }
     var loader = document.getElementById("pre-loader");
     window.addEventListener("load",function(){
-        loader.style.display="none";
+        setTimeout(loaderi, 5000);
+        
     })
 </script>
     </body>
