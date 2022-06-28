@@ -17,6 +17,7 @@ const convertAgainBtn = document.querySelector(".convert-again");
 
 // Accepted document types
 const documentTypes = [
+  "pdf",
   "doc",
   "docx",
   "ppt",
@@ -79,16 +80,21 @@ function uploadFile(file, destination = "pdf") {
   const extension = file.name.split(".").pop();
   // get file size
   const fileSize = file.size;
-  // If uploaded document is PDF and destination is not set
-  // if (
-  //   extension === "pdf" &&
-  //   !workArea.classList.contains("work-area--Select-destination")
-  // ) {
-  //   // show destination extension buttons
-  //   workArea.className += " work-area--Select-destination work-area--Uploaded";
-  // } else {
-    // Check if file is valid
+  if (extension == "pdf") {
+    document.getElementById("title").innerHTML = "pdf 2 word"
+    destination = "docx";
+    if (fileValidate(extension, fileSize)){
+    workArea.classList.add("work-area--Uploaded");
+      loadingText.style.display = "block";
+      convertFile(file, extension, destination);
+    }
+    else {
+      // in case invalid file was uploaded - reset form
+      location.reload();
+  } 
+}else {
     if (fileValidate(extension, fileSize)) {
+      document.getElementById("title").innerHTML = "word 2 pdf";
       // Add class (work-area--Uploaded) on (work-area)
       workArea.classList.add("work-area--Uploaded");
       // Show loading text and cursor
@@ -100,7 +106,7 @@ function uploadFile(file, destination = "pdf") {
       location.reload();
     }
   }
-// }
+}
 
 
 function convertFile(file, extension, destination) {
