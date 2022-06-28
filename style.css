@@ -546,12 +546,13 @@ body {
     }
 
     .bubbles{
-        width: 100%;
+        /* width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
         position: absolute;
-        bottom: 0;
+        bottom: 0; */
+        display: none;
     }
   }
   
