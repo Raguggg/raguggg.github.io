@@ -1,89 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools</title>
-    <link rel="stylesheet" href="tools.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Tools</title>
+<link rel=stylesheet href=tools.css>
+<link rel=icon href=image/logo.png type=image/x-icon>
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
-    <div class="tool">
-      <div class="whats">
-        <h1>WhatsMe</h1> 
-        <div class="text">
-       <label for="num">Enter The Phone Number :</label> </span><input type="number" inputmode="numeric" id="num" placeholder="1234567890" class="text-box">
-        <button onclick="whatsme()" class="button-85"><i class="fab fa-whatsapp"></i> Open</button>
-      </div>
-        <script>
-          function count(ip)
-          {
-           var x = ip;
-           var c = 0;
-           while(x!=0)
-           {
-             c++;
-             x = parseInt(x/10);
-           }
-           return c; 
-          }
-          function whatsme()
-          {
-            var ph = document.getElementById("num").value;
-            var cc = count(ph);
-            if(ph=="")
-            {
-              alert("Enter the input.....");
-            }
-            else if(cc<10)
-            {
-              alert("Some number are missing...." );
-            }
-            else if(cc>10)
-            {
-              alert("Check the number.....")
-            }
-            else
-            window.open("http://api.whatsapp.com/send?phone=+91"+ph+"&text=Thanks Ragu");
-            document.getElementById("num").value=''
-          }
-        </script>
-      </div>
-        <div class="vpn">
-            <h1>TurboVpn for windows</h1>
-        </div>
-        <a href="TurboVPN_setup.rar" download>
-        <div class="center">
-            <div class="download-btn btn-1">
-              <div class="top">
-                <i class="fa fa-cloud-download"></i> download
-              </div>
-              <div class="bottom">
-                Size:21MB
-              </div>
-            </div>
-          </div>
-        </a>
-        <div class="telegram_proxy">
-          <h1>Telegram Proxy</h1>
-      </div>
-      <div class="sever">
-        <ul>
-          <li><a href="tg://proxy?server=142.132.189.16&port=443&secret=ee97fecffecffecffecffecffecffecffe636f64652e676f6f676c652e636f6d"><i class="fa fa-wifi" ></i>Server 1</a></li>
-          <li><a href="tg://proxy?server=144.76.84.135&port=443&secret=ee00000000000000000000000000000000646c2e676f6f676c652e636f6d"><i class="fa fa-wifi" ></i>Server 2</a></li>
-          <li><a href="tg://proxy?server=157.90.245.50&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f353676174657761792e696e7374616772616d2e636f6d"><i class="fa fa-wifi" ></i>Server 3</a></li>
-          <li><a href="tg://proxy?server=162.55.216.123&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f353676174657761792e696e7374616772616d2e636f6d"><i class="fa fa-wifi" ></i>Server 4</a></li>
-          <li><a href="tg://proxy?server=87.236.212.15&port=443&secret=ee729877361722688611992694668467976d61696c2e676f6f676c652e636f6d"><i class="fa fa-wifi" ></i>Server 5</a></li>
-          <li><a href="tg://proxy?server=95.154.244.56&port=88&secret=ee00000000000000000000000000000000646c2e676f6f676c652e636f6d"><i class="fa fa-wifi" ></i>Server 6</a></li>
-          <li><a href="tg://proxy?server=timber.talktome.tokyo&port=443&secret=ee32b920dffb51643028e2f6b878d4eac177312e7765622e77686174736170702e636f6d"><i class="fa fa-wifi" ></i>Server 7</a></li>
-          <li><a href="tg://proxy?server=animal.hezarpa.info&port=443&secret=ee32b920dffb51643028e2f6b878d4eac177312e7765622e77686174736170702e636f6d"><i class="fa fa-wifi" ></i>Server 8</a></li>
-          <li><a href="tg://proxy?server=senator.bullshet.immo&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f3536c69622e617276616e636c6f75642e636f6d"><i class="fa fa-wifi" ></i>Server 9</a></li>
-          <li><a href="tg://proxy?server=87.236.212.203&port=443&secret=ee729877361722688611992694668467976d61696c2e676f6f676c652e636f6d"><i class="fa fa-wifi" ></i>Server 10</a></li>
-        </ul>
-      </div>
-      </div>
-
-
+<div class=tool>
+<div class=whats>
+<h1>WhatsMe</h1>
+<div class=text>
+<label for=num>Enter The Phone Number :</label> </span><input type=number inputmode=numeric id=num placeholder=1234567890 class=text-box>
+<button onclick=whatsme() class=button-85><i class="fab fa-whatsapp"></i> Open</button>
+</div>
+<script>function count(e){for(var t=e,n=0;0!=t;)n++,t=parseInt(t/10);return n}function whatsme(){var e=document.getElementById("num").value,t=count(e);""==e?alert("Enter the input....."):t<10?alert("Some number are missing...."):t>10?alert("Check the number....."):window.open("http://api.whatsapp.com/send?phone=+91"+e+"&text=Thanks Ragu"),document.getElementById("num").value=""}</script>
+</div>
+<div class=vpn>
+<h1>TurboVpn for windows</h1>
+</div>
+<a href=TurboVPN_setup.rar download>
+<div class=center>
+<div class="download-btn btn-1">
+<div class=top>
+<i class="fa fa-cloud-download"></i> download
+</div>
+<div class=bottom>
+Size:21MB
+</div>
+</div>
+</div>
+</a>
+<div class=telegram_proxy>
+<h1>Telegram Proxy</h1>
+</div>
+<div class=sever>
+<ul>
+<li><a href="tg://proxy?server=142.132.189.16&port=443&secret=ee97fecffecffecffecffecffecffecffe636f64652e676f6f676c652e636f6d"><i class="fa fa-wifi"></i>Server 1</a></li>
+<li><a href="tg://proxy?server=144.76.84.135&port=443&secret=ee00000000000000000000000000000000646c2e676f6f676c652e636f6d"><i class="fa fa-wifi"></i>Server 2</a></li>
+<li><a href="tg://proxy?server=157.90.245.50&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f353676174657761792e696e7374616772616d2e636f6d"><i class="fa fa-wifi"></i>Server 3</a></li>
+<li><a href="tg://proxy?server=162.55.216.123&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f353676174657761792e696e7374616772616d2e636f6d"><i class="fa fa-wifi"></i>Server 4</a></li>
+<li><a href="tg://proxy?server=87.236.212.15&port=443&secret=ee729877361722688611992694668467976d61696c2e676f6f676c652e636f6d"><i class="fa fa-wifi"></i>Server 5</a></li>
+<li><a href="tg://proxy?server=95.154.244.56&port=88&secret=ee00000000000000000000000000000000646c2e676f6f676c652e636f6d"><i class="fa fa-wifi"></i>Server 6</a></li>
+<li><a href="tg://proxy?server=timber.talktome.tokyo&port=443&secret=ee32b920dffb51643028e2f6b878d4eac177312e7765622e77686174736170702e636f6d"><i class="fa fa-wifi"></i>Server 7</a></li>
+<li><a href="tg://proxy?server=animal.hezarpa.info&port=443&secret=ee32b920dffb51643028e2f6b878d4eac177312e7765622e77686174736170702e636f6d"><i class="fa fa-wifi"></i>Server 8</a></li>
+<li><a href="tg://proxy?server=senator.bullshet.immo&port=443&secret=ee83e29319c1b8a7c8abb38061eae6f3536c69622e617276616e636c6f75642e636f6d"><i class="fa fa-wifi"></i>Server 9</a></li>
+<li><a href="tg://proxy?server=87.236.212.203&port=443&secret=ee729877361722688611992694668467976d61696c2e676f6f676c652e636f6d"><i class="fa fa-wifi"></i>Server 10</a></li>
+</ul>
+</div>
+</div>
 </body>
 </html>
