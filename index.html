@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TZLDFNGM4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5TZLDFNGM4');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-5TZLDFNGM4");</script>
 <meta charset=UTF-8>
-<meta name="google-site-verification" content="google7ab02f675b61b20e">
+<meta name=google-site-verification content=google7ab02f675b61b20e>
 <meta name="keywords"content="ragu, file converter, ragug, Ragu, ragu website,ragu2k,ragu kec,RAGU,ragu eee, ragug,ragugg,raguggg ,ragug website"/>
-<meta name="description" content="This website is created by ragu ">
+<meta name=description content="This website is created by ragu ">
 <meta http-equiv=X-UA-Compatible content="ie=edge">
-<meta name="author" content="RAGU G">
-<meta property="og:title" content="Ragu website ,file converter ,online file converter">
-<meta property="og:description" content="This website is created by Ragu">
+<meta name=author content="RAGU G">
+<meta property=og:title content="Ragu website ,file converter ,online file converter">
+<meta property=og:description content="This website is created by Ragu">
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 <title>Ragu</title>
 <link rel=stylesheet href=style.css>
 <link rel=stylesheet href=https://pro.fontawesome.com/releases/v5.10.0/css/all.css>
 <link rel=icon href=image/logo.png type=image/x-icon>
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+<link rel=stylesheet href=right_style.css>
 </head>
 <body>
 <div id=pre-loader>
@@ -33,6 +29,22 @@
 <div>A</div>
 <div>O</div>
 <div>L</div>
+</div>
+</div>
+<div id=contextMenu class=context-menu style=display:none>
+<div class=card>
+<div class=header2>
+</div>
+<div class=body>
+<ul>
+<li><a href=\index.html>Home <i class="fas fa-home icon"></i></a></li>
+<li><a href=\converter.html>File Converter <i class="fa-solid fa-file"></i></a></li>
+<li><a href=\tools.html>Tools <i class="fa-solid fa-gear"></i></a></li>
+<li><a href=\products.html>Products <i class="fa-brands fa-product-hunt"></i></a></li>
+<li><a href=\about.html>About <i class="fa-solid fa-address-card"></i></a></li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class=header>
@@ -102,6 +114,7 @@ website is developed by myself. If you need to contact me visit below following 
 <img src=image/heart.png>
 </div>
 </div>
+<script>document.onclick=hideMenu;document.oncontextmenu=rightClick;function hideMenu(){document.getElementById("contextMenu").style.display="none"}function rightClick(a){a.preventDefault();if(document.getElementById("contextMenu").style.display=="block"){hideMenu()}else{var b=document.getElementById("contextMenu");b.style.display="block";b.style.left=a.pageX+"px";b.style.top=a.pageY+"px"}}</script>
 <script src=https://cdn.jsdelivr.net/npm/typed.js@2.0.12></script>
 <script>var typed=new Typed(".auto",{strings:["My self","RAGU","Welcome You All....."],typeSpeed:150,backSpeed:150,loop:true});</script>
 <script>function loaderi(){loader.style.display="none"}var loader=document.getElementById("pre-loader");window.addEventListener("load",function(){setTimeout(loaderi,10)});</script>
