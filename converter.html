@@ -14,6 +14,8 @@
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link rel=icon href=image/logo.png type=image/x-icon>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel=stylesheet>
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+<link rel=stylesheet href=right_style.css>
 </head>
 <body>
 <div id=uploadArea class=upload-area>
@@ -49,5 +51,24 @@ document
 </div>
 <script src=https://unpkg.com/convertapi-js/lib/convertapi.js></script>
 <script src=converter.js></script>
+</div>
+<div id=contextMenu class=context-menu style=display:none>
+<div class=card>
+<div class=header2>
+</div>
+<div class=body>
+<ul>
+<li><a href="index.html">Home <i class="fas fa-home icon"></i></a></li>
+<li><a href="converter.html">File Converter <i class="fa-solid fa-file"></i></a></li>
+<li><a href="tools.html">Tools <i class="fa-solid fa-gear"></i></a></li>
+<li><a href="products.html">Products <i class="fa-brands fa-product-hunt"></i></a></li>
+<li><a href="about.html">About <i class="fa-solid fa-address-card"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>document.onclick=hideMenu;document.oncontextmenu=rightClick;function hideMenu(){document.getElementById("contextMenu").style.display="none"}function rightClick(a){a.preventDefault();if(document.getElementById("contextMenu").style.display=="block"){hideMenu()}else{var b=document.getElementById("contextMenu");b.style.display="block";b.style.left=a.pageX+"px";b.style.top=a.pageY+"px"}}</script>
+
 </body>
 </html>
