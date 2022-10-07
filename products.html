@@ -81,6 +81,29 @@ Pywhatsbomb
 </div>
 </div>
 </div>
+<script> 
+      document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){ 
+      return false; 
+      } 
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+      </script> 
 <script>document.onclick=hideMenu;document.oncontextmenu=rightClick;function hideMenu(){document.getElementById("contextMenu").style.display="none"}function rightClick(a){a.preventDefault();if(document.getElementById("contextMenu").style.display=="block"){hideMenu()}else{var b=document.getElementById("contextMenu");b.style.display="block";b.style.left=a.pageX+"px";b.style.top=a.pageY+"px"}}</script>
 
 </body>
