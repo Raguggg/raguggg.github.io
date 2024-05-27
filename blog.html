@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Medium Articles - Ragu</title>
+
+    <!-- SEO Tags -->
+    <meta name="description" content="We provide services in web development, web scraping, Telegram bots, Chrome extension development, and Arduino programming. Contact us to bring your ideas to life.">
+    <meta name="keywords" content="web development, web scraping, telegram bots, chrome extension, Arduino,ragu, ragug, Ragu, ragu website, ragu2k, ragu kec, RAGU, ragu eee, raguggg">
+    <meta name="author" content="RAGU G">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="google7ab02f675b61b20e">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Our Services - Web Development, Web Scraping, Telegram Bots, and More">
+    <meta property="og:description" content="Explore our services to discover how we can help you with web development, web scraping, Telegram bots, Chrome extensions, Arduino projects, and more.">
+    <meta property="og:image" content="./assets/img/aboutpic.jpg">
+    <meta property="og:url" content="https://raguggg.github.io/">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0WLPZ5VQY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X0WLPZ5VQY');
+    </script>
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            color: #333;
+        }
+
+        .card-subtitle {
+            color: #666;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .description {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+      <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">RAGU</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li ><a class="active"  href="blog.html">Blogs</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="mailto: ragu19062002@gmail.com"><i class="bi bi-envelope-at"></i></a>
+        <a href="http://api.whatsapp.com/send?phone=+917598226670&amp;text=Hi Ragu" target="_"><i class="bi bi-whatsapp"></i></a>
+        <a href="tg://resolve?domain=ragu2k"><i class="bi bi-telegram"></i></a>
+        <a href="https://www.instagram.com/ragu2k/" target="_"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ragug/" target="_"> <i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Raguggg/" target="_"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+  <main id="main">
+    
+    <div>
+        <h2>Blogs-blog</h2>
+      </div>
+
+    <div class="container">
+        <div class="row" id="articles-row"></div>
+    </div>
+</main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ragug';
+            const articlesRow = document.getElementById('articles-row');
+            const defaultImage = 'assets/img/medium.png'; // Specify the path to your default image here
+
+            // Function to fetch data from the API
+            async function fetchArticles() {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    displayArticles(data.items);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            }
+
+            // Function to display articles
+            function displayArticles(articles) {
+                articles.forEach(article => {
+                    const col = document.createElement('div');
+                    col.className = 'col-lg-4 col-md-6 mb-4';
+
+                    const card = document.createElement('div');
+                    card.className = 'card mb-3';
+                    card.style.width = '100%';
+
+                    const image = document.createElement('img');
+                    image.className = 'card-img-top';
+                    image.alt = article.title;
+                    const thumbnailUrl = extractThumbnail(article.description) || defaultImage;
+                    image.src = thumbnailUrl;
+
+                    const cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
+
+                    const cardTitle = document.createElement('h5');
+                    cardTitle.className = 'card-title';
+                    cardTitle.textContent = article.title;
+
+                    const cardSubtitle = document.createElement('h6');
+                    cardSubtitle.className = 'card-subtitle mb-2 text-muted';
+                    cardSubtitle.textContent = new Date(article.pubDate).toLocaleDateString();
+
+                    const description = document.createElement('p');
+                    description.className = 'card-text description';
+                    description.textContent = truncateDescription(article.description, 156 - article.title.length)
+
+                    const link = document.createElement('a');
+                    link.href = article.link;
+                    link.className = 'btn btn-primary';
+                    link.textContent = 'Read More';
+                    link.target = "_blank";
+
+                    cardBody.appendChild(cardTitle);
+                    cardBody.appendChild(cardSubtitle);
+                    cardBody.appendChild(description);
+                    cardBody.appendChild(link);
+                    card.appendChild(image);
+                    card.appendChild(cardBody);
+                    col.appendChild(card);
+                    articlesRow.appendChild(col);
+                });
+            }
+
+            // Function to extract thumbnail from the article description
+            function extractThumbnail(description) {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(description, 'text/html');
+                const figure = doc.querySelector('figure');
+                if (figure) {
+                    const img = figure.querySelector('img');
+                    if (img) {
+                        return img.src;
+                    }
+                }
+                return null;
+            }
+
+            // Function to truncate description
+            function truncateDescription(description, maxLength) {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(description, 'text/html');
+                const text = doc.body.textContent || "";
+                return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+            }
+
+            // Fetch articles on page load
+            fetchArticles();
+        });
+    </script>
+</body>
+
+</html>
