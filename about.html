@@ -64,7 +64,62 @@ gtag('config', 'G-X0WLPZ5VQY');
       padding: 0 10px
   }
   </style>
+    <script>
+      function calculateAge(birthdate) {
+          const now = new Date();
+          const birthDate = new Date(birthdate);
+          
+          let years = now.getFullYear() - birthDate.getFullYear();
+          let months = now.getMonth() - birthDate.getMonth();
+          let days = now.getDate() - birthDate.getDate();
+          let hours = now.getHours() - birthDate.getHours();
+          let minutes = now.getMinutes() - birthDate.getMinutes();
+          let seconds = now.getSeconds() - birthDate.getSeconds();
+          
+          if (seconds < 0) {
+              minutes--;
+              seconds += 60;
+          }
+          
+          if (minutes < 0) {
+              hours--;
+              minutes += 60;
+          }
+          
+          if (hours < 0) {
+              days--;
+              hours += 24;
+          }
+          
+          if (days < 0) {
+              months--;
+              const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+              days += prevMonth.getDate();
+          }
+          
+          if (months < 0) {
+              years--;
+              months += 12;
+          }
+          
+          return ` ${years}Y:${months}M:${days}D:${hours}h:${minutes}m:${seconds}s`;
+      }
 
+      function startLiveAgeCalculation(birthdate) {
+          function updateAge() {
+              const age = calculateAge(birthdate);
+              document.getElementById('age').textContent = age;
+          }
+          
+          updateAge(); // Initial call to show age immediately
+          setInterval(updateAge, 1000); // Update age every second
+      }
+
+      window.onload = function() {
+          const birthdate = "2002-06-19T00:00:00"; // Your birthdate here
+          startLiveAgeCalculation(birthdate);
+      };
+  </script>
 </head>
 
 <body>
@@ -131,7 +186,7 @@ gtag('config', 'G-X0WLPZ5VQY');
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-rounded-right"></i> <strong>Age:</strong> 21</li>
+                  <li><i class="bi bi-rounded-right"></i> <strong>Age:</strong><span  id="age"></span></li>
                   <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> BE</li>
                   <li><i class="bi bi-rounded-right"></i> <strong>Email:</strong> ragu19062002@gmail.com</li>
                   <li><i class="bi bi-rounded-right"></i> <strong>Freelance:</strong> Available</li>
