@@ -62,6 +62,9 @@ gtag('config', 'G-X0WLPZ5VQY');
     .hidden {
       display: none;
     }
+    .error {
+    border: 2px solid red;
+  }
   </style>
 
 </head>
@@ -133,9 +136,7 @@ gtag('config', 'G-X0WLPZ5VQY');
 
           <div class="col-lg-8 mt-5 mt-lg-0">
             <iframe name="formview" class="hidden" title="Response"></iframe>
-
             <form target="formview" id="regForm" class="forms" autocomplete="off" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfUG4RBgOtIB3nXTIFhmE5Cg0UwB52om5E0uKdSt6kkaqhqmQ/formResponse">
-              
               <div class="row" id="formip">
                 <div class="col-md-6 form-group">
                   <input type="text" name="entry.855792255" class="form-control" id="name" placeholder="Your Name" required>
@@ -155,7 +156,7 @@ gtag('config', 'G-X0WLPZ5VQY');
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" onclick="submitform()">Send Message</button></div>
+              <div class="text-center"><button type="submit" onclick="submitform(); return false;">Send Message</button></div>
             </form>
             
           </div>
@@ -168,7 +169,62 @@ gtag('config', 'G-X0WLPZ5VQY');
   </main><!-- End #main -->
 
 <script>
+   function isValidInput(input) {
+    return input.trim() !== ""; // Check if the input is not just spaces
+  }
+
+  function highlightField(field, isValid) {
+    if (isValid) {
+      field.classList.remove("error");
+    } else {
+      field.classList.add("error");
+    }
+  }
   function submitform(){
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const subjectField = document.getElementById("subject");
+    const messageField = document.querySelector("textarea[name='entry.1106428870']");
+
+    let isFormValid = true;
+
+    if (!isValidInput(nameField.value)) {
+      highlightField(nameField, false);
+      nameField.value = "";
+      isFormValid = false;
+    } else {
+      highlightField(nameField, true);
+    }
+
+    if (!isValidInput(emailField.value)) {
+      emailField.value = "";
+      highlightField(emailField, false);
+      isFormValid = false;
+    } else {
+      highlightField(emailField, true);
+    }
+
+    if (!isValidInput(subjectField.value)) {
+      subjectField.value = "";
+      highlightField(subjectField, false);
+      isFormValid = false;
+    } else {
+      highlightField(subjectField, true);
+    }
+
+    if (!isValidInput(messageField.value)) {
+      messageField.value = "";
+      highlightField(messageField, false);
+      isFormValid = false;
+    } else {
+      highlightField(messageField, true);
+    }
+
+    if (!isFormValid) {
+      alert("Please fill in all required fields correctly.");
+      return false;
+    }
+
     document.getElementById("regForm").submit();
     document.querySelector(".text-center").style.display='none'
     document.querySelector("#formip").style.display='none'
